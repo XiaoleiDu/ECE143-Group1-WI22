@@ -9,7 +9,7 @@ Board Games are slowly becoming an integral part of the life. Using a collection
 - Siddhant Saoji
 - Joshua Smith
 - Ali Zaidi
-- Xialei Du
+- Xiaolei Du
 
 ## Data Collection
 The data is taken from ...
