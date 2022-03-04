@@ -1,4 +1,4 @@
-# ECE143-Group1-WI22 Group I
+# ECE143-Group1-WI22
 
 ## Summary
 Board Games are slowly becoming an integral part of the life. Using a collection of different features about the most popular games, we aim to extract the recipe for the most popular board game. We use the Board Game Geek database as the main data bank and analyse different hypotheses and conditions to recommend the best game.
