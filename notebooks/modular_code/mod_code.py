@@ -183,13 +183,14 @@ def plot_top_10_hbar(board_game_Y_vs_X_df, Y_label, BG_cat_name, plt_hatch = '*'
     plt.figure(figsize=(10,10))
     ax1 = board_game_Y_vs_X_df_percent_df[BG_cat_name].sort_values(ascending=False).head(10).plot(kind='barh', hatch = plt_hatch, color = plt_color, edgecolor = 'white')
     ax1.set_ylabel("")
-    ax1.set_title('Top 10 ' + Y_label + ' for ' + BG_cat_name + ' Board Games', fontweight='bold', fontsize = 16)
+    ax1.set_yticklabels(sorted_df.index, fontweight='bold', fontsize=16)
+    ax1.set_title('Top 10 ' + Y_label + ' for ' + BG_cat_name + ' Board Games', fontweight='bold', fontsize = 20)
     ax1.set_xlim([0, np.ceil(sorted_df.iloc[0,placement]) + 3])
-    ax1.set_xlabel("Share [%]", fontsize = 14, fontweight = 'bold')
+    ax1.set_xlabel("Share [%]", fontsize = 16, fontweight = 'bold')
 
     # Annotate the percentage value
     for i, perc in enumerate(sorted_df.iloc[:10,placement]):
 
-        ax1.text(perc + 0.05, i -0.05, f'{sorted_df.iloc[i,placement]:0.1f} %', color='black', fontweight='bold')
+        ax1.text(perc + 0.05, i -0.05, f'{sorted_df.iloc[i,placement]:0.1f} %', color='black', fontweight='bold', fontsize = 16)
     
     plt.show()
