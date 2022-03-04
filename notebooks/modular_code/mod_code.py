@@ -3,6 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 import seaborn as sns
 
+
 def plot_Min_Max_Players_Boxplot(games_df, BG_cat, BG_cat_name, showfliers = [False, False], notches = [False, False]):
     """
     Plot Min and Maximum Number of Players of a Board Game Category Boxplots
@@ -15,6 +16,7 @@ def plot_Min_Max_Players_Boxplot(games_df, BG_cat, BG_cat_name, showfliers = [Fa
 
     :Output (Type)        : 1.) None
     """
+    
     # Make sure it is a panda series
     assert isinstance(games_df, pd.DataFrame)
     # Make sure it is a string and valid board game categories
@@ -54,6 +56,40 @@ def plot_Min_Max_Players_Boxplot(games_df, BG_cat, BG_cat_name, showfliers = [Fa
     ax_max.set_ylabel("Number of Maximum Players", fontsize=12, fontweight='bold')
     ax_max.set_xticklabels([])
     ax_max.axes.get_xaxis().set_visible(False)
+
+
+def create_Min_Max_df(games_df, BG_cat, BG_cat_name):
+    """
+    Create a dataframe that contains a board game category, Minimum number of players, and maximum number of players
+    :Inputs (Type)        : 1.) games_df (pd.Dataframe)       - Board game data frame
+                            2.) BG_cat (str)                 - Board Game Category
+                            3.) BG_cat_name (str)            - Board Game Category name
+                            4.) showfliers (Bool in list)    - To plot outliers or not
+                            5.) notches (Bool in list)       - To plot notches
+                            
+
+    :Output (Type)        : 1.) min_max_cat_df (pd.Dataframe)
+    """
+    # Make sure it is a panda series
+    assert isinstance(games_df, pd.DataFrame)
+    # Make sure it is a string and valid board game categories
+    assert isinstance(BG_cat, str)
+    assert BG_cat in list(games_df.columns[34:].values.tolist())
+    # Check for valid board game category name
+    assert isinstance(BG_cat_name, str)
+    assert BG_cat_name in ['Thematic', 'Strategy', 'War', 'Family', 'CGS', 'Abstract', 'Party', 'Childrens']
+
+    # Replace 0 with NaN
+    games_df[BG_cat] = games_df[BG_cat].replace({0:np.nan})
+    # Replace 1 with the name of the Board Game Category
+    games_df[BG_cat] = games_df[BG_cat].replace({1:BG_cat_name})
+    # Replace Min and Max players values that are not the Board Game Category with nan
+    games_df.loc[games_df[BG_cat].isnull(), "MinPlayers"] = np.nan
+    games_df.loc[games_df[BG_cat].isnull(), "MaxPlayers"] = np.nan
+
+    # Min_max dataframe of the category
+    return games_df[['MinPlayers', 'MaxPlayers']].assign(Cat=BG_cat_name)
+
 
 def manipulate_Y_vs_X_data(games_df, board_game_Y_vs_X, Y_data_frame):
 
