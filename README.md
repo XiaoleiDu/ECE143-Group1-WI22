@@ -56,6 +56,9 @@ The preprocessing can be seen in the cleanup [Notebook](./notbeooks/data-cleanup
 
 We first checked through each of the columns to see the relevant data available. Upon secondary research on trends in lifestyle, the effect of the pandemic, ages, etc. we developed different hypotheses. Using these hypotheses, we found corresponding features matching these trends to model them into our data paradigm. The visualizations can be seen in the viusalization notebook [Link](link).
 
+### Set 0: Correlation Between the Board Game Design Features and User Ratings
+As a board game developer, it is crucial to analyze which board game design features are correlated with the user ratings. With the correlation heatmap, board game developers can optimize the board game design features to improve the product ratings and players' satisfaction in the future.
+
 ### Set 4: Minimum and Maximum Numbers of Players
 The optimal minimum and maximum numbers of players for a board game are two of the most important board game design features. Some categories of the board game are more suitable for team players, and some others might be more exciting to play individually. The dataset will be visualized with boxplots to determine the minimum, first quartile, median, third quartile, and maximum players for each board game category minimum and maximum numbers of players.
 
