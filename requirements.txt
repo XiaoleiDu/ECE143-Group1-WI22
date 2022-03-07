@@ -104,3 +104,4 @@ widgetsnbextension==3.5.2
 wordcloud==1.8.1
 yarg==0.1.9
 zipp==3.7.0
+scikit-surprise==1.1.1
