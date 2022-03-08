@@ -11,6 +11,34 @@ Board Games are slowly becoming an integral part of the life. Using a collection
 - Ali Zaidi
 - Xiaolei Du
 
+
+
+## Installation
+
+Requires python 3.7+
+
+Major third-party modules:
+- pandas 1.4.1
+- plotly 5.6.0
+- seaborn 0.11.2
+- scikit-surprise 1.1.1
+
+Clone the repository using
+```
+git clone https://github.com/XiaoleiDu/ECE143-Group1-WI22.git
+```
+
+Install dependencies
+```
+pip install requirements.txt
+```
+
+
+## Usage
+
+All the data used for visualisation is stored in the [data](https://github.com/XiaoleiDu/ECE143-Group1-WI22/tree/main/data) folder, visualisation can be seen in the [notebook](https://github.com/XiaoleiDu/ECE143-Group1-WI22/blob/main/notebooks/combined_notebook.ipynb).
+
+
 ## Data Selection & Collection
 The goal of the analysis is to find the best parameters to make a game. In this sense, BoardGameGeek is a large repository of games and their metrics. BoardGameGeek is a community platform for board game enthusiasts to discuss and explore new board games, interact about their progress and rate their favorites. The database also has numerous details about each game. The categories, themes, mechanics, popularity metrics among others can help us gain deep insights into the community of board game players.
 
