@@ -30,7 +30,7 @@ git clone https://github.com/XiaoleiDu/ECE143-Group1-WI22.git
 
 Install dependencies
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 
