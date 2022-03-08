@@ -56,23 +56,48 @@ The preprocessing can be seen in the cleanup [Notebook](./notbeooks/data-cleanup
 
 We first checked through each of the columns to see the relevant data available. Upon secondary research on trends in lifestyle, the effect of the pandemic, ages, etc. we developed different hypotheses. Using these hypotheses, we found corresponding features matching these trends to model them into our data paradigm. The visualizations can be seen in the viusalization notebook [Link](link).
 
-### Set 0: Correlation Between the Board Game Design Features and User Ratings
+### Data Point 0: Correlation Between the Board Game Design Features and User Ratings
 As a board game developer, it is crucial to analyze which board game design features are correlated with the user ratings. With the correlation heatmap, board game developers can optimize the board game design features to improve the product ratings and players' satisfaction in the future.
+
+### Data Point 1: Games Published per Year
+
+We are interested in the trend of in supposed trend of increased demand in board games. To find this trend we filter data to after 1950 since Board Game Geek has data going into the B.C.s
+
+### Data Point 2: Game Weight
+Board game Geek has a rating system of for game complexity. This system ranks games as from 1 to 5. This is a possible key indicator to whether a board is well recieve and/or sells well. First we sum the amount of games in each range to determine if there is an opening in the market. Then we compared complexity to attributes that tied to increased ownership. these include user rating, ownership and number of people who want the game.
 
 ### Set 4: Minimum and Maximum Numbers of Players
 The optimal minimum and maximum numbers of players for a board game are two of the most important board game design features. Some categories of the board game are more suitable for team players, and some others might be more exciting to play individually. The dataset will be visualized with boxplots to determine the minimum, first quartile, median, third quartile, and maximum players for each board game category minimum and maximum numbers of players.
 
-### Set 5: Recommended Ages
+### Data point 3: Minimum and Maximum Numbers of Players
+The optimal minimum and maximum numbers of players for a board game are two of the most important board game design features. Some categories of the board game are more suitable for team players, and some others might be more exciting to play individually. The dataset will be visualized with boxplots to determine the minimum, first quartile, median, third quartile, and maximum players for each board game's minimum and maximum numbers of players per category.
+
+
+### Data Point 4: Recommended Ages
 We want to see the effect of recommended ages on their popularity and ratings. The data has the community's recommendation for minimum age of the players as well as the manufacturer's recommendation for playing age. Using these we see how popular are board games in people of different ages. We also see the gap in the two recommended ages and derive ideas for what kind of games are easier than the manufacturers thought they were. 
 
-### Set 6: Popularity of Different Board Game Categories
+### Data Point 5: Popularity of Different Board Game Categories
 Analyzing and studying the popularity of different board game categories is crucial for board game developers publishers, and manufacturers. With the data visualization, the board game industry would be able to know which board game categories they should put more effort in the game development to maximize their profits. Besides that, the board game industry can continue to get more feedback from the users to improve the overall board game designs that have low popularity.
 
-### Set 9: Crowdfunding
+### Data Point 6: Reimplementation
+
+We study the effect of number of reimlementations of a game depending on the number of people who own the game, due to the large amount of people we use a log10 scale for the number of people owning the board games.
+
+### Data Point 7: Play time
+We are mainly interested in understanding the effect of play time of a game with its popularity. The column 'MfgPlaytime' show the play time as per the manufacturer recommendations. The columns 'ComMinPlaytime' and 'ComMaxPlaytime'show the minimum and maximun play time of the game as per the community
+
+
+### Data Point 8: Crowdfunding/ Effect of Kickstarter
 For a new manufacturer entering the industry, funding is of utmost importance. Hence it is necessary to see if crowdfunding impacts the popularity of games. Crowdfunding also shows that the audience is already excited about the game even before it is released. We explore which categories and themes are most likely to be funded by Kickstarter campaigns and thus add another feature towards designing the most meaningful game from the manufacturer's perspective.
 
-### Set 13: Top 10 Board Game Themes for Different Board Game Categories
+### Data Point 9: Top 10 Board Game Themes for Different Board Game Categories
 Visualizing top 10 board game themes for different board game categories for the game developers to understand which board game themes are the most common for different board game categories. With the user rating data and board game themes data, board game developers can determine which board games themes designs are considered a success and which are not. Including the right board game design themes are crucial to capture the interests of board game lovers and increase player engagement towards the board game.
 
-### Set 16: Top 10 Board Game Mechanics for Different Board Game Categories
+### Data Point 10: Top 10 Board Game Mechanics for Different Board Game Categories
 Visualizing the top 10 board game mechanics for different board game categories data is important for the game developers to understand which board game mechanics are the most common for different board game categories. With the user rating data and board game mechanics data, board game developers can determine which board games mechanics designs are considered a success and which are not. Including the right board game design, mechanics are crucial to capture the interests of board game lovers and increase player engagement towards the board game.
+
+### Data Point 11: Board Game Subcategories
+Pie charts are ustilised to visualise most popular board game subcategories.
+
+### Data Point 11: Publisher
+To be able to sales as many copies of games we must find a will publisher with a track record of publishing games similar games.
