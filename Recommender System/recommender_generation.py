@@ -25,8 +25,8 @@ def recommender_surprise(algo, full_data_path, data_recommender, target_games, b
     # Find Reviews of target_games
     target_games_reviews = data_recommender.query("ID in @target_games")
 
-    # Get Reviewers who gave high rating
-    target_games_reviews = target_games_reviews.sort_values(by="rating", ascending=False)
+    # Get Reviewers who gave low rating
+    target_games_reviews = target_games_reviews.sort_values(by="rating", ascending=True)
 
     target_games_reviews.to_csv("target_games_reviews.csv", index=False)
 
