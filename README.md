@@ -129,7 +129,7 @@ Visualizing the top 10 board game mechanics for different board game categories 
 ### Data Point 11: Board Game Subcategories
 Pie charts are ustilised to visualise most popular board game subcategories.
 
-### Data Point 11: Publisher
+### Data Point 12: Publisher
 To be able to sales as many copies of games we must find a will publisher with a track record of publishing games similar games.
 
 ## Recommender System
