@@ -39,8 +39,6 @@ Please download Reviews CSV into notebooks/Recommender_System folder.
 
 https://www.kaggle.com/threnjen/board-games-database-from-boardgamegeek?select=user_ratings.csv
 
-Please name downloaded file user_ratings.csv
-
 ## Usage
 
 All the data used for visualisation is stored in the [data](https://github.com/XiaoleiDu/ECE143-Group1-WI22/tree/main/data) folder, visualisation can be seen in the [notebook](https://github.com/XiaoleiDu/ECE143-Group1-WI22/blob/main/notebooks/combined_notebook.ipynb).
