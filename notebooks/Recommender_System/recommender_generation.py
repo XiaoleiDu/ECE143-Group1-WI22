@@ -10,7 +10,7 @@ def recommender_surprise(algo, full_data_path, data_recommender, target_games, b
     :param target_games: The games the recommender is targeting.
     :param board_game_categories: The target categories someone is looking for.
     :param number_recommendations: The number of games that are recommended to extract features.
-    :return:
+    :return: The top rated games recommended by the Model. We will extract the features in the recommender_stats.
     """
 
     assert isinstance(data_recommender, pd.DataFrame)
@@ -25,7 +25,7 @@ def recommender_surprise(algo, full_data_path, data_recommender, target_games, b
     # Find Reviews of target_games
     target_games_reviews = data_recommender.query("ID in @target_games")
 
-    # Get Reviewers who gave low rating
+    # Get Reviewers who gave low/average rating
     target_games_reviews = target_games_reviews.sort_values(by="rating", ascending=True)
 
     target_games_reviews.to_csv("target_games_reviews.csv", index=False)
@@ -42,6 +42,7 @@ def recommender_surprise(algo, full_data_path, data_recommender, target_games, b
 
     valid_targets = {k: v for k, v in board_game_categories.items() if v not in [None, False]}
 
+    # Find games in request categories
     df_full_data = pd.read_csv(full_data_path, index_col=0)
     all_selected_categories = pd.DataFrame(columns=df_full_data.columns)
     for cat in valid_targets.keys():
@@ -50,15 +51,16 @@ def recommender_surprise(algo, full_data_path, data_recommender, target_games, b
 
     list_of_rating = []
 
-    all_selected_categories.to_csv('all_selected_categories.csv', index=False)
+    #all_selected_categories.to_csv('all_selected_categories.csv', index=False)
 
+    # Run Model on those reviewers
     for user in target_games_reviews['user']:
         for game in all_selected_categories['BGGId']:
             y = algo.predict(uid=user, iid=game)
             list_of_rating.append((user, y[1], y[3]))
 
     list_of_rating = pd.DataFrame(list_of_rating, columns=["user", "ID", "Rating"])
-    list_of_rating.to_csv('list_of_rating.csv')
+    #list_of_rating.to_csv('list_of_rating.csv')
 
     list_of_rating = list_of_rating.groupby(list_of_rating['ID'], as_index=False).aggregate({'Rating': 'mean'})
     list_of_rating = list_of_rating.sort_values(by='Rating', ascending=False)
