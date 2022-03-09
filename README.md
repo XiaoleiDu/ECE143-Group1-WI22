@@ -35,6 +35,11 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
+Please download Reviews CSV into notebooks/Recommender_System folder.
+
+https://www.kaggle.com/threnjen/board-games-database-from-boardgamegeek?select=user_ratings.csv
+
+Please name downloaded file user_ratings.csv
 
 ## Usage
 
@@ -135,4 +140,12 @@ To be able to sales as many copies of games we must find a will publisher with a
 ## Recommender System
 Run recommender_pipeline.py to get started.
 
+In the recommender_pipeline.py, please change board_game_cat to your target categories and in the recommender_surprise function
+change target_games to list of BGGId games you are looking insight for.
+
+To train a new model, here are the steps:
+1) Download Reviews CSV, https://www.kaggle.com/threnjen/board-games-database-from-boardgamegeek?select=user_ratings.csv
+2) Chane review_csv_path to path of Reviews CSV.
+3) Uncomment data_processing_surprise and adjust hyperparameters.
+4) Uncomment build_model_surprise, you will get the model and performance information. 
 

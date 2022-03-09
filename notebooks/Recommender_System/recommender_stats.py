@@ -2,8 +2,10 @@ import pandas as pd
 
 def recommender_stats_surprise(full_data_path, mechanics_data_path, df_games):
     """
+    Returns features of top rated games.
 
     :param full_data_path: Cleaned CSV file path (games).
+    :param mechanics_data_path: Mechanics CSV file path.
     :param df_games: The games recommended by Surprise Model, to get extract features of interest.
     :return: Selected features from the df_games, pd.DataFrame return
     """

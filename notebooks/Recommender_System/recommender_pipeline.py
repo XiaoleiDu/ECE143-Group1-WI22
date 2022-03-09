@@ -14,6 +14,8 @@ Pipeline for Recommender System
  * you can load a saved model or train a new model
 3) recommender_surprise (Find Games which reviews enjoyed)
 4) recommender_stats_surprise (Extract relevant features)
+
+The final output is csv containing the top features to improve your game!
 """
 
 review_csv_path = r"./user_ratings.csv"
@@ -28,11 +30,11 @@ _, algo = dump.load(r"./model_2000000_kaggle_random.pkl")
 # Load df_reviews (unzip, if file not found)
 df_reviews = pd.read_csv(r"./df_reviews.csv")
 
-#algo, predictions_dict = build_model_surprise(df_reviews)
-#print(predictions_dict)
+# algo, predictions_dict = build_model_surprise(df_reviews)
+# print(predictions_dict)
 
 # Save Algo
-#dump.dump(r"model_2000000_kaggle_random.pkl", algo=algo)
+# dump.dump(r"model_2000000_kaggle_random.pkl", algo=algo)
 
 board_game_cat = {
     "Cat:Thematic": False,

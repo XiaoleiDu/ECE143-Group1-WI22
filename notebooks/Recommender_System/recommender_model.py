@@ -9,6 +9,7 @@ from surprise import accuracy
 
 def build_model_surprise(df_reviews, test_size_ratio=.1, use_cross_validate=False):
     """
+    The function builds the Surprise SVDpp model using reviews dataframe.
 
     :param df_reviews: This dataframe was returned by data_processing_surprise from recommender_data_processing.py .
     :param test_size_ratio: The ratio of data given to become the test set. The default is .1 .
@@ -28,7 +29,7 @@ def build_model_surprise(df_reviews, test_size_ratio=.1, use_cross_validate=Fals
     algo = SVDpp()
 
     if use_cross_validate:
-        print(cross_validate(algo, data, measures=['RMSE', 'MAE'], cv=5, verbose=True))
+        cross_validate(algo, data, measures=['RMSE', 'MAE'], cv=5, verbose=True)
     else:
         algo.fit(trainset)
 

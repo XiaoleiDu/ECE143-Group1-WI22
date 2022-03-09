@@ -2,6 +2,7 @@ import pandas as pd
 
 def data_processing_surprise(dataset_path: str, number_of_reviews=1000000, shuffle=False):
     """
+    The function process the review csv, to correct format for Surprise.
 
     :param dataset_path: The path to reviews csv, needs to contain these exact columns: ["user" , "ID", "rating"].
     :param number_of_reviews: The number of reviews you want to train for Recommender. Default is 1,000,000.

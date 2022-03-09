@@ -3,12 +3,13 @@ import pandas as pd
 def recommender_surprise(algo, full_data_path, data_recommender, target_games, board_game_categories: dict,
                          number_recommendations=10):
     """
+    This function returns top rated games by people who game poor/average rating to target games.
 
     :param algo: The Surprise algo returned by build_model_surprise from recommender_model.py .
     :param full_data_path: Clean CSV, containing all game features.
     :param data_recommender: Pandas DF of df_reviews
     :param target_games: The games the recommender is targeting.
-    :param board_game_categories: The target categories someone is looking for.
+    :param board_game_categories: The target game categories someone is looking for.
     :param number_recommendations: The number of games that are recommended to extract features.
     :return: The top rated games recommended by the Model. We will extract the features in the recommender_stats.
     """
@@ -28,7 +29,7 @@ def recommender_surprise(algo, full_data_path, data_recommender, target_games, b
     # Get Reviewers who gave low/average rating
     target_games_reviews = target_games_reviews.sort_values(by="rating", ascending=True)
 
-    target_games_reviews.to_csv("target_games_reviews.csv", index=False)
+    # target_games_reviews.to_csv("target_games_reviews.csv", index=False)
 
     # Get First 10 Reviewers
     if target_games_reviews.shape[0] > 10:
@@ -49,18 +50,18 @@ def recommender_surprise(algo, full_data_path, data_recommender, target_games, b
         all_selected_categories = pd.concat([all_selected_categories, df_full_data[df_full_data[cat] == 1]],
                                             ignore_index=True)
 
+    # all_selected_categories.to_csv('all_selected_categories.csv', index=False)
+
     list_of_rating = []
 
-    #all_selected_categories.to_csv('all_selected_categories.csv', index=False)
-
-    # Run Model on those reviewers
+    # Run Model on those reviewers and found games from all_selected_categories.
     for user in target_games_reviews['user']:
         for game in all_selected_categories['BGGId']:
             y = algo.predict(uid=user, iid=game)
             list_of_rating.append((user, y[1], y[3]))
 
     list_of_rating = pd.DataFrame(list_of_rating, columns=["user", "ID", "Rating"])
-    #list_of_rating.to_csv('list_of_rating.csv')
+    # list_of_rating.to_csv('list_of_rating.csv')
 
     list_of_rating = list_of_rating.groupby(list_of_rating['ID'], as_index=False).aggregate({'Rating': 'mean'})
     list_of_rating = list_of_rating.sort_values(by='Rating', ascending=False)
