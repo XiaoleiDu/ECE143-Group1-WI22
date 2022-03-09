@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 def recommender_stats_surprise(full_data_path, mechanics_data_path, df_games):
     """
