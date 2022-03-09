@@ -17,8 +17,6 @@ Board Games are slowly becoming an integral part of the life. Using a collection
 
 Requires python 3.7+
 
-Please do have Microsoft Visual C++ 14.0 or greater to work with scikit-surprise: https://www.youtube.com/watch?v=rcI1_e38BWs
-
 Major third-party modules:
 - pandas 1.4.1
 - plotly 5.6.0
@@ -34,10 +32,9 @@ Install dependencies
 ```
 pip install -r requirements.txt
 ```
+If you have issue installing Microsoft Visual C++ 14.0 or greater to work with scikit-surprise you can use thus [guide](https://www.youtube.com/watch?v=rcI1_e38BWs).
 
-Please download Reviews CSV into notebooks/Recommender_System folder.
-
-https://www.kaggle.com/threnjen/board-games-database-from-boardgamegeek?select=user_ratings.csv
+To use recommender system download reviews.csv into notebooks/Recommender_System folder from this [link](https://www.kaggle.com/threnjen/board-games-database-from-boardgamegeek?select=user_ratings.csv)
 
 ## Usage
 
@@ -138,12 +135,12 @@ To be able to sales as many copies of games we must find a will publisher with a
 ## Recommender System
 Run recommender_pipeline.py to get started.
 
-In the recommender_pipeline.py, please change board_game_cat to your target categories and in the recommender_surprise function
+In the `recommender_pipeline.py`, change board_game_cat to your target categories and in the recommender_surprise function
 change target_games to list of BGGId games you are looking insight for.
 
 To train a new model, here are the steps:
-1) Download Reviews CSV, https://www.kaggle.com/threnjen/board-games-database-from-boardgamegeek?select=user_ratings.csv
-2) Change review_csv_path to path of Reviews CSV.
+1) Download `user_ratings.csv`,from [here](https://www.kaggle.com/threnjen/board-games-database-from-boardgamegeek?select=user_ratings.csv)
+2) Change review_csv_path to path of `user_ratings.csv`.
 3) Uncomment data_processing_surprise and adjust hyperparameters.
 4) Uncomment build_model_surprise, you will get the model and performance information. 
 
