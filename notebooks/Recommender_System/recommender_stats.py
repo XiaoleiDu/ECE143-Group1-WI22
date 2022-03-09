@@ -18,14 +18,11 @@ def recommender_stats_surprise(full_data_path, mechanics_data_path, df_games):
     # Read mechanics
     df_csv_mechanics = pd.read_csv(mechanics_data_path).set_index('BGGId')
     
-
     return_df = pd.DataFrame(columns=df_csv_clean.columns)
     for game in df_games['ID']:
         return_df = pd.concat([return_df, df_csv_clean[df_csv_clean['BGGId'] == game]], ignore_index=True)
 
     return_df = return_df.loc[:, ~(return_df.columns.str.contains('^Unnamed') | return_df.columns.str.contains('^Cat'))]
-
-    #df_final_output, df = recommender_stats_surprise(clean_csv_path, mechanics_csv, df_games)
 
     return_df["Mechanics"] = ''
     count = 0
