@@ -32,7 +32,7 @@ Install dependencies
 ```
 pip install -r requirements.txt
 ```
-If you have issue installing Microsoft Visual C++ 14.0 or greater to work with scikit-surprise you can use thus [guide](https://www.youtube.com/watch?v=rcI1_e38BWs).
+If you have issues in installing Microsoft Visual C++ 14.0 or greater to work with scikit-surprise you can use this [guide](https://www.youtube.com/watch?v=rcI1_e38BWs).
 
 To use recommender system download reviews.csv into notebooks/Recommender_System folder from this [link](https://www.kaggle.com/threnjen/board-games-database-from-boardgamegeek?select=user_ratings.csv)
 
@@ -47,8 +47,8 @@ The goal of the analysis is to find the best parameters to make a game. In this 
 We found many people had tried to collect different aspects and details about board games. But the BGG database seemed to be the most complete. We found a very recent snapshot of this data on Kaggle and chose to use that for our analysis. The data was scraped and collected by a user on Kaggle. More details about the dataset can be found [here](https://www.kaggle.com/threnjen/board-games-database-from-boardgamegeek?select=bgg_data_documentation.txt).
 
 ### Data Cleaning
-The datset was analyzed and checked for relevant features. While preprocessing the data by filling missing and NaN values.
-The  available csv files are
+The datset was analyzed and checked for relevant features. Before our analysis, we cleaned the data and filled missing and NaN values.
+The csv files are available in the [Data](https://github.com/XiaoleiDu/ECE143-Group1-WI22/tree/main/Data) folder.
 
 #### Games
 The file contains the following relevant information,
