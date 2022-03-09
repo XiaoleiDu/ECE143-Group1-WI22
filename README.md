@@ -145,6 +145,5 @@ To train a new model, here are the steps:
    
    Hyperparameters are the number_of_reviews for the model and if you want the reviews dataset to be shuffled.
 5) Uncomment build_model_surprise, you will get the model and performance information.
-   Hyperparameters are if you want cross validation and ratio of test data for performance.
-   
-   
+
+   Hyperparameters are if you want cross validation and ratio of test data for performance.   
