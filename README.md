@@ -135,7 +135,7 @@ To be able to sales as many copies of games we must find a will publisher with a
 ## Recommender System
 Run recommender_pipeline.py to get started.
 
-In the `recommender_pipeline.py`, change board_game_cat to your target categories and in the recommender_surprise function
+In the [`recommender_pipeline.py`](https://github.com/XiaoleiDu/ECE143-Group1-WI22/blob/main/notebooks/Recommender_System/recommender_pipeline.py), change board_game_cat to your target categories and in the recommender_surprise function
 change target_games to list of BGGId games you are looking insight for.
 
 To train a new model, here are the steps:
