@@ -17,6 +17,8 @@ Board Games are slowly becoming an integral part of the life. Using a collection
 
 Requires python 3.7+
 
+Please do have Microsoft Visual C++ 14.0 or greater to work with scikit-surprise: https://www.youtube.com/watch?v=rcI1_e38BWs
+
 Major third-party modules:
 - pandas 1.4.1
 - plotly 5.6.0
