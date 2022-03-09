@@ -142,5 +142,6 @@ To train a new model, here are the steps:
 1) Download `user_ratings.csv`,from [here](https://www.kaggle.com/threnjen/board-games-database-from-boardgamegeek?select=user_ratings.csv)
 2) Change review_csv_path to path of `user_ratings.csv`.
 3) Uncomment data_processing_surprise and adjust hyperparameters.
-4) Uncomment build_model_surprise, you will get the model and performance information. 
-
+   Hyperparameters are the number_of_reviews for the model and if you want the reviews dataset to be shuffled.
+5) Uncomment build_model_surprise, you will get the model and performance information.
+   Hyperparameters are if you want cross validation and ratio of test data for performance.
