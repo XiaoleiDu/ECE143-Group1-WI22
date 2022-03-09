@@ -143,7 +143,7 @@ change target_games to list of BGGId games you are looking insight for.
 
 To train a new model, here are the steps:
 1) Download Reviews CSV, https://www.kaggle.com/threnjen/board-games-database-from-boardgamegeek?select=user_ratings.csv
-2) Chane review_csv_path to path of Reviews CSV.
+2) Change review_csv_path to path of Reviews CSV.
 3) Uncomment data_processing_surprise and adjust hyperparameters.
 4) Uncomment build_model_surprise, you will get the model and performance information. 
 
