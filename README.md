@@ -78,7 +78,7 @@ Root:
 │     └───themes.csv
 │     
 ├───Presentation
-│     ├───EECE 143 - Successful Board Game Design Analysis and Recommendation System.pdf
+│     ├───ECE 143 - Successful Board Game Design Analysis and Recommendation System.pdf
 │     ├───ECE 143 - Successful Board Game Design Analysis and Recommendation System.pptx
 │     └───ECE 143 Group 1 Proposal.pdf
 │     
