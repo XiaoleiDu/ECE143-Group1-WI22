@@ -46,9 +46,6 @@ All the data used for visualisation is stored in the [data](https://github.com/X
 ```
 ECE143-Group1-WI22
 │   README.md
-│   colorAnalysis.py
-│   fig1code_Yuqing.py
-│   fig2code_Yuqing.py
 │   requirements.txt
 │   .gitignore
 │
