@@ -42,51 +42,52 @@ All the data used for visualisation is stored in the [data](https://github.com/X
 
 
 ## File Structure
-
 ```
-ECE143-Group1-WI22
-│   README.md
-│   requirements.txt
-│   .gitignore
+Root:
+├───Data
+│     ├───games_cleaned.csv
+│     ├───mechanics.csv
+│     ├───publishers_reduced.csv
+│     ├───subcategories.csv
+│     └───themes.csv
+│     
+├───notebooks
+│     ├───modular_code
+│     │     └───mod_code.py
+│     │     
+│     ├───Recommender_System
+│     │     ├───df_reviews.csv.zip
+│     │     ├───model_2000000_kaggle_random.pkl.zip
+│     │     ├───recommender_data_processing.py
+│     │     ├───recommender_generation.py
+│     │     ├───recommender_model.py
+│     │     ├───recommender_pipeline.py
+│     │     └───recommender_stats.py
+│     │     
+│     └───combined_notebook.ipynb
+│    
+├───original_data
+│     ├───artists_reduced.csv
+│     ├───bgg_data_documentation.txt
+│     ├───designers_reduced.csv
+│     ├───games.csv
+│     ├───mechanics.csv
+│     ├───publishers_reduced.csv
+│     ├───ratings_distribution.csv
+│     ├───subcategories.csv
+│     └───themes.csv
+│     
+├───Presentation
+│     ├───ECE 143 - Successful Board Game Design Analysis and Recommendation System.pptx
+│     └───ECE 143 Group 1 Proposal.pdf
+│     
+├───.gitignore
+│    
+├───README.md
 │
-└───Data
-│   │   games_cleaned.csv
-│   │   mechanics.csv
-│   │   publishers_reduced.csv
-│   │   subcategories.csv
-│   │   themes.csv
-│   
-└───original_data
-│   │   artists_reduced.csv
-│   │   bgg_data_documentation.txt
-│   │   designers_reduced.csv
-│   │   games.csv
-│   │   mechanics.csv
-│   │   publishers_reduced.csv
-│   │   ratings_distribution.csv
-│   │   subcategories.csv
-│   │   themes.csv
-│
-└───Presentation
-│   │   Images
-│   │   ECE 143 - Successful Board Game Design Analysis and Recommendation System.pptx
-│   │   ECE 143 Group 1 Proposal.pdf
-│
-└───notebooks
-│   │   combined_notebook.ipynb
-│   └───modular_code
-│   │   │   mod_code.py
-│   │
-│   └───Recommender_System
-│   │   │   df_reviews.csv.zip
-│   │   │   model_2000000_kaggle_random.pkl.zip
-│   │   │   recommender_data_processing.py
-│   │   │   recommender_generation.py
-│   │   │   recommender_model.py
-│   │   │   recommender_pipeline.py
-│   │   │   recommender_stats.py
-
+└───requirements.txt
 ```
+
 
 ## Data Selection & Collection
 The goal of the analysis is to find the best parameters to make a game. In this sense, BoardGameGeek is a large repository of games and their metrics. BoardGameGeek is a community platform for board game enthusiasts to discuss and explore new board games, interact about their progress and rate their favorites. The database also has numerous details about each game. The categories, themes, mechanics, popularity metrics among others can help us gain deep insights into the community of board game players.
