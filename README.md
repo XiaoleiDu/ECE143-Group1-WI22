@@ -58,6 +58,17 @@ ECE143-Group1-WI22
 │   │   publishers_reduced.csv
 │   │   subcategories.csv
 │   │   themes.csv
+│   
+└───original_data
+│   │   artists_reduced.csv
+│   │   bgg_data_documentation.txt
+│   │   designers_reduced.csv
+│   │   games.csv
+│   │   mechanics.csv
+│   │   publishers_reduced.csv
+│   │   ratings_distribution.csv
+│   │   subcategories.csv
+│   │   themes.csv
 │
 └───Presentation
 │   │   Images
